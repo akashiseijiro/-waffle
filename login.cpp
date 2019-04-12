@@ -18,12 +18,12 @@ void login::login_details()
 
 			if (userName == "#waffle" && userPassword == "2707")
 			{
-				cout << "Welcome Captain!\n";
+				cout << "Welcome Captain"<<endl;
 				break;
 			}
 			else
 			{
-				cout << "Invalid login attempt. Please try again.\n" << '\n';
+				cout << "Invalid login attempt. Please try again.\n" << endl;;
 				loginAttempt++;
 			}
 		};
@@ -35,7 +35,7 @@ void login::login_details()
 
 		cout << "Thank you for logging in.\n";
 	}
-void login::screen()
+void login::screen()                          // either see menu of logout
 {
 	int op;
 	cout << " Welcome to #waffles" << endl;
