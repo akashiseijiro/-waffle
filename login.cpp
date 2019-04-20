@@ -1,40 +1,57 @@
 #include<iostream>
 #include"login.h"
+#include<conio.h>
+
 using namespace std;
 
 void login::login_details()
 
+{
+	long userId; //for user id of administrator
+
+d:
+	cout << "\n\n\n\n\n\n\n\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^---------------------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+	cout << "\n\t\t\t\t\t\t\tEnter Login Id = ";
+	cin >> userId;
+	cout << "\t\t\t\t\t\t\t---------------------";
+	if (userId != 1353)
 	{
-		string userName;
-		string userPassword;
-		int loginAttempt = 0;
-
-		while (loginAttempt < 5)
-		{
-			cout << "Please enter your user name: ";
-			cin >> userName;
-			cout << "Please enter your user password: ";
-			cin >> userPassword;
-
-			if (userName == "#waffle" && userPassword == "2707")
-			{
-				cout << "Welcome Captain"<<endl;
-				break;
-			}
-			else
-			{
-				cout << "Invalid login attempt. Please try again.\n" << endl;;
-				loginAttempt++;
-			}
-		};
-		if (loginAttempt == 5)
-		{
-			cout << "Too many login attempts! The program will now terminate.";
-			exit(0);
-		}
-
-		cout << "Thank you for logging in.\n";
+		cout << "\nDon't try to be smart.....Enter correct id\n";
+		goto d;
 	}
+	else
+	{
+		cout << "\n\n\n\t\t\t\t\t\t\tHello #waffles,\n";
+	}
+z:
+	string pwd = "pass";  //password
+	string pass = "";  //empty string
+	char c;
+	cout << "\n\n\n\t\t\t\t\t\t\tPassword = ";
+p:
+	c = _getch();
+	cout << "*";   //for printing * instead for password
+	if (c != 13)
+	{
+		pass = pass + c;  //for concatenating the string
+		goto p;
+	}
+
+	{
+		if (pass == pwd)
+		{
+			cout << "\n\n\t\t\t\t\t\t\tAccess Granted. Welcome to our system\n\n\n";
+			system("PAUSE");
+			system("CLS");
+			
+		}
+		else
+		{
+			cout << "\nWrong Password\n";
+			goto z;
+		}
+	}
+}
 void login::screen()                          // either see menu of logout
 {
 	int op;
