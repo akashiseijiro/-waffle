@@ -14,6 +14,7 @@ int main()
 	m.DisplayMenu();             
 	OrderManager o;
 	o.GetMenu();
+	o.PrintBill();
 	
 
 }
