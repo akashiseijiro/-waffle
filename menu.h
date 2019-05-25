@@ -16,7 +16,7 @@ class OrderManager: public menu
 		
 	public:
 		void GetMenu();
-	
+	        void PrintBill();
 };
 
 #endif
